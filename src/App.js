@@ -1,6 +1,6 @@
 import contactsJSON from "./data/contacts.json";
 import Header from "./components/Header";
-import { Grid } from "@mui/material";
+import { Grid, List } from "@mui/material";
 import ContactForm from "./components/ContactForm";
 import Contact from "./components/Contact";
 import { useState } from "react";
@@ -34,7 +34,13 @@ const App = () => {
           <ContactForm handleInput={handleInput} />
         </Grid>
         <Grid item xs={12} sm={6}>
-          <Contact data={contacts} />
+          <List
+            sx={{ width: "100%", maxWidth: 400, bgcolor: "background.paper" }}
+          >
+            {contacts.map((data) => (
+              <Contact data={data} />
+            ))}
+          </List>
         </Grid>
       </Grid>
     </>
