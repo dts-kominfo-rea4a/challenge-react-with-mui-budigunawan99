@@ -19,8 +19,8 @@ const Contact = ({ data }) => {
     <>
       <List sx={{ width: "100%", maxWidth: 400, bgcolor: "background.paper" }}>
         {data.map((item) => (
-          <>
-            <ListItem key={item.email} alignItems="flex-start">
+          <React.Fragment key={item.email}>
+            <ListItem alignItems="flex-start">
               <ListItemAvatar>
                 <Avatar alt="Remy Sharp" src={item.photo} />
               </ListItemAvatar>
@@ -36,7 +36,7 @@ const Contact = ({ data }) => {
               />
             </ListItem>
             <Divider variant="inset" component="li" />
-          </>
+          </React.Fragment>
         ))}
       </List>
     </>

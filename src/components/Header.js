@@ -17,10 +17,7 @@ const Header = () => {
       >
         Call a Friend
       </Typography>
-
-      <Typography paragraph>
-        <Divider sx={{ marginBottom: "4%" }}>Your friendly contact app</Divider>
-      </Typography>
+      <Divider sx={{ marginBottom: "4%" }}>Your friendly contact app</Divider>
     </>
   );
 };
